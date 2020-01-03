@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,#ce2e3c,#0080ff,#fff);
+    position: fixed;
+    z-index: 1;
+    display:flex;
+}
+
+header p {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+header img#carrinho {
+    position: fixed;
+    margin-left: 90%;
+    padding-left:  10px;
+}
+
+.menu-icon {
+    position: fixed;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #5b859a;
+    color: rgba(255,255,255,.7);
+    cursor: pointer;
+    transition: all .4s;
+    left: 2px;
+    top: 51px;
+    z-index: 1;
+}
+
+.menu-icon:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#chk {
+    position: absolute;
+    display: none;
+}
+
+.menu {
+    height: 100%;
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+/*Nav do menu principal*/
+#principal {
+    width: 280px;
+    left: -280px;
+    box-shadow: 5px 2px 5px 2px rgba(0,0,0,.6);
+}
+
+/*funçaõ do checkbox*/
+#chk:checked ~.bg {
+    display: block;
+}
+
+#chk:checked ~#principal {
+    transform: translateX(280px);
+}
+
+/*Nav do sub-menu*/
+#admin {
+    width: 280px;
+    left: -280px;
+}
+
+#admin:target {
+    transform: translateX(280px);
+    box-shadow: 5px 2px 5px 2px rgba(0,0,0,.6);
+}
+
+
+ul {
+    list-style: none;
+    text-align: center;
+    color: rgba(255,255,255,.7);
+}
+
+ul li a {
+    display: block;
+    font-size: 18px;
+    font-family: 'Arial';
+    padding: 10px;
+    border-bottom: solid 2px #000;
+    color: rgba(255,255,255,.7);
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+ul li span {
+    float: right;
+    padding-right: 10px;
+}
+
+.voltar {
+    margin-left: -10px;
+    margin-top: 50px;
+    background-color: #111;
+    border-left: solid 5px #444;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+}
+
+.rodape {
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background: linear-gradient(to right,#ce2e3c,#0080ff,#fff);
+}
+
+.rodape a{
+    text-align: center;
+    margin-left: 5%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* REDES SOCIAIS */
+
+.redes-sociais {
+    margin-bottom: 0px;
+    margin-top: 90%;
+}
+
+.redes-sociais a {
+    padding: 0px;
+    text-align: center;
+    margin-left: 20%;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+/* CONFIGURAÇÃO PARA TELAS MAIORES */
+
+/*==========TABLETS 768==========*/
+
+@media screen and (min-width: 768px) {
+
+    .logo {margin-left: -10px;}
+
+    .banner {width: 100%; margin-left: 40px;}
+
+    .servico {width: 49%; float: left; margin-right: 2%; height: 550px}
+
+    .servico:nth-child(2) {margin-right: 0;}
+
+    .btn {padding: 1em;}
+
+    .newsletter input {width: 70%; padding: 2%; float: left; margin-right: 1%;}
+
+    .newsletter button {width: 29%; padding: 2%; float: right; margin-top: 0; height: 60px; text-align:center;}
+}
+
+/*==========TABLET E DESKTOP 960==========*/
+
+@media screen and (min-width: 960px) {
+    .titulo {width: 60%; float: left; text-align: left;}
+
+    .titulo h2 {font-size: 3em;}
+
+    .titulo h3 {font-size: 2em;}
+
+    .botoes {width: 30%; float: right; margin-right: 2%;}
+
+    .servicos {width: 100%; margin-left: 10px}
+
+    .newsletter button {width: 29%; padding: 0%; float: right; margin-top: 0; height: 70px; text-align:center;}
+
+    .banner {float: left; margin-left: 10px;}
+
+    .servico {width: 32%; height: 550px;}
+    .servico:nth-child(2) {margin-right: 2%;}
+    .servico:nth-child(3) {margin-right: 0;}
+    .servico img {width: 98%; height: 35%; margin-left: 1%; margin-top: 1%;}
+
+    .inner p {text-align: justify;}
+
+    .newsletter {width: 92%; margin-left: 50px; margin-bottom: 1em; margin-top: -20px; border-radius: 7px;}
+
+    .logo {width: 300px; height: 70px; background: url(img/logo480.png) center center/200px no-repeat;}
+
+    .banner {width: 91%; margin-left: 55px;}
+}
+
+/*==========TABLET E DESKTOP 1800==========*/
+
+@media screen and (min-width: 800px) {
+    .banner {width: 90%; float: left; margin-left: 50px;}
+    .servicos {float: left; margin-left: 50px;}
+    .servico {height: 550px;}
+    .newsletter button {width: 28%; padding: 0%; float: right; margin-top: 0; height: 70px; text-align:center;}
+    .newsletter input {width: 70%; padding: 0%; float: left; margin-top: 0; height: 70px; text-align:center; font-size: 14pt;}
+}
+
+
+/*==========TABLET E DESKTOP 1400==========*/
+
+@media screen and (min-width: 1400px) {
+    .banner {float: left; margin-left: 50px;}
+    .servicos {float: left; margin-left: 50px;}
+    .servico {height: 550px;}
+    .newsletter button {width: 28%; padding: 0%; float: right; margin-top: 0; height: 70px; text-align:center;}
+    .newsletter input {width: 70%; padding: 0%; float: left; margin-top: 0; height: 70px; text-align:center; font-size: 14pt;}
+}
